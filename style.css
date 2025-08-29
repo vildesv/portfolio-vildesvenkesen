@@ -1,0 +1,267 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #b6b6cf;
+  color: #2e3a5e;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start; 
+  min-height: 100vh; 
+  padding: 200px 20px 75px 20px; 
+}
+
+/* Grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: start;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 20px; 
+  max-width: 1200px; 
+  width: 100%;
+}
+
+/* Venstre side */
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Header */
+.title-header h1,
+.title-header p {
+  font-family: 'Quicksand', Arial, sans-serif;
+}
+
+.title-header h1 {
+  font-size: 2.5rem;
+}
+
+.title-header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Høyre side */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative; /* Viktig: popup blir absolutt relativt til denne */
+}
+
+/* Knappene */
+.nav-wrapper {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-wrapper button {
+  font-family: 'Quicksand', Arial, sans-serif;
+  background: #434f74;
+  color: #c7c7d3;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.nav-wrapper button:hover {
+  background: #69728e;
+}
+
+/* Gengar gif */
+.gengar {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+  top: -40px;
+  transition: left 0.3s ease, top 0.3s ease;
+}
+
+/* Popup */
+.popup {
+  position: absolute;
+  top: 60px; /* under knappene */
+  left: 0;
+  background: #434f74;
+  border: 2px solid #434f74;
+  border-radius: 16px;
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+  min-height: 220px;      
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+/* Skjul popup når hidden */
+.popup.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Innhold i popup */
+.popup-content {
+  display: none;
+  text-align: left;
+  color: #c0c0d4;
+}
+
+.popup-content.visible {
+  display: block;
+}
+
+/* Mellomrom etter label i Contact */
+.popup-content li strong {
+  margin-right: 0.3rem;
+  font-weight: bold;
+}
+
+/* Lister i popup (About + Contact) */
+.popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.popup ul li {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+}
+
+.popup ul li i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #c0c0d4;
+  width: 20px;
+  text-align: center;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Piltaster container */
+.arrows {
+  display: flex;
+  justify-content: space-between; /* Venstre til venstre, høyre til høyre */
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Piltaster */
+.arrow {
+  background: none;      /* Fjern boksen */
+  border: none;
+  padding: 0;            /* Ingen ekstra padding */
+  color: #c0c0d4;        /* Pilfarge */
+  cursor: pointer;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.arrow:hover {
+  color: #ffffff;         /* Lysere farge ved hover */
+  transform: scale(1.2);
+}
+
+.arrow svg {
+  display: block;
+}
+
+
+/* Lenker */
+.popup a {
+  color: #c0c0d4;
+  text-decoration: none;
+}
+
+.popup a:hover {
+  text-decoration: underline;
+}
+
+.project-img {
+  width: 100%;
+  max-height: 200px;     
+  object-fit: cover;     
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  background: #434f74;
+  color: #c7c7d3;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer .footer-gif {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+
+/* Responsivt design */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .left-side, .right-side {
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gengar {
+    top: -30px;
+    width: 50px;
+  }
+
+  .popup {
+    width: 90%;
+    top: 70px;
+  }
+}

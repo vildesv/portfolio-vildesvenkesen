@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Vilde Svenkesen</title>
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Ikoner -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="grid-layout">
+      <!-- Venstre side -->
+      <section class="left-side">
+        <header class="title-header">
+          <h1>VILDE SVENKESEN</h1>
+          <p>FULLSTACK DEVELOPER | COACH | GAMER</p>
+        </header>
+      </section>
+
+      <!-- Høyre side -->
+      <section class="right-side">
+        <nav class="nav-buttons">
+          <div class="nav-wrapper">
+            <button data-popup="about">ABOUT</button>
+            <button data-popup="projects">PROJECTS</button>
+            <button data-popup="contact">CONTACT</button>
+            <img
+              src="img/gengar-jumping.gif"
+              alt="Gengar"
+              class="gengar"
+              id="gengar"
+            />
+          </div>
+        </nav>
+
+        <!-- Popup vindu -->
+        <section id="popup" class="popup hidden">
+          <button id="close-popup" class="close-btn">✖</button>
+
+          <!-- About innhold -->
+          <div id="about-container" class="popup-content hidden"></div>
+
+          <!-- Projects innhold -->
+          <div id="projects-container" class="popup-content hidden">
+            <div id="popup-text"></div>
+            <div class="arrows">
+              <!-- Venstre pil -->
+              <button id="prev" class="arrow" aria-label="Previous">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 14L4 8L10 2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <!-- Høyre pil -->
+              <button id="next" class="arrow" aria-label="Next">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 2L12 8L6 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Contact innhold -->
+          <div id="contact-container" class="popup-content hidden"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <img src="img/mew.gif" alt="Mew GIF" class="footer-gif" />
+      © Vilde Svenkesen 2025
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

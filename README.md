@@ -1,7 +1,7 @@
 # Portfolio – Vilde Svenkesen
 
 Velkommen til min personlige portefølje! 🎨  
-Dette er et enkelt, responsivt nettsted laget for å vise frem mine ferdigheter og prosjekter som webutvikler. Porteføljen er bygget med ren HTML, CSS og JavaScript for et lett og oversiktlig design.
+Dette er et enkelt, responsivt nettsted laget for å vise frem mine ferdigheter og prosjekter som utvikler. Porteføljen er bygget med ren HTML, CSS og JavaScript for et lett og oversiktlig design.
 
 [🔗 Se live-demo her](https://portfolio-vildesvenkesen.vercel.app)
 

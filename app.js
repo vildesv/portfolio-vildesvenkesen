@@ -33,7 +33,8 @@ const contents = {
   `,
   contact: `
     <h2>Contact</h2>
-    <p>I'm open to opportunities and collaborations. Feel free to reach out!</p>
+    <p>I'm open to opportunities and collaborations. 
+    <br>Feel free to reach out!</p>
     <br>
     <ul>
       <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:vilde_svenkesen@hotmail.no">vilde_svenkesen@hotmail.no</a></li>

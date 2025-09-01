@@ -13,7 +13,6 @@ This is a simple, responsive website created to showcase my skills and projects 
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Responsive Design](https://img.shields.io/badge/Responsive-Design-4CAF50?style=for-the-badge)
 ![Interactive UI](https://img.shields.io/badge/Interactive-UI-F9A825?style=for-the-badge)
 
 ---

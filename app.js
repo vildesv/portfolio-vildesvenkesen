@@ -4,6 +4,7 @@ const popup = document.getElementById("popup");
 const aboutContainer = document.getElementById("about-container");
 const projectsContainer = document.getElementById("projects-container");
 const contactContainer = document.getElementById("contact-container");
+const skillsContainer = document.getElementById("skills-container");
 const popupText = document.getElementById("popup-text");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
@@ -12,9 +13,15 @@ const closeBtn = document.getElementById("close-popup");
 const contents = {
   about: `
     <h2>About me</h2>
-    <p>Hey there! My name is Vilde, and I’m currently a student and aspiring fullstack developer. I have a strong interest in tech, programming, gaming, and art, and as you might have noticed, I'm also a huge Pokémon enthusiast. Being on the autism spectrum gives me a unique perspective and strong attention to detail, which helps me approach challenges thoughtfully and innovatively, while valuing clear communication and structure.</p>
+    <p>Hey there! My name is Vilde Ingelin Svenkesen. 
+    <br>I’m a course participant at "Kodehode", aspiring fullstack developer and esports coach. 
     <br>
-    <h3>Skills and Tools</h3>
+    <br>I have a strong interest in tech, programming, gaming and art. As you may have noticed, I'm a bit of a Pokémon enthusiast and I'm actively engaged in a Pokémon GO-community where I live. 
+    <br>
+    <br>Being on the autism spectrum gives me a unique perspective and strong attention to detail, which helps me approach challenges thoughtfully and innovatively, while valuing clear communication and structure.</p>
+  `,
+  skills: ` 
+    <h2>Skills and Tools</h2>
     <ul>
       <li><i class="devicon-csharp-plain"></i> C#, .NET</li>
       <li><i class="devicon-javascript-plain"></i> JavaScript, React, Vite, Node.js</li>
@@ -87,8 +94,6 @@ async function fetchRepos() {
 
 function displayProject(index) {
   const repo = repos[index];
-
-  // Bilde-path basert på repo-navnet (må samsvare med filnavn i img/projects/)
   const imagePath = `img/projects/${repo.name}.png`;
 
   popupText.innerHTML = `
@@ -108,11 +113,15 @@ buttons.forEach((btn, index) => {
     aboutContainer.classList.remove("visible");
     projectsContainer.classList.remove("visible");
     contactContainer.classList.remove("visible");
+    skillsContainer.classList.remove("visible");
 
     // Vis relevant innhold
     if (type === "about") {
       aboutContainer.classList.add("visible");
       aboutContainer.innerHTML = contents.about;
+    } else if (type === "skills") { // ✅ lagt til
+      skillsContainer.classList.add("visible");
+      skillsContainer.innerHTML = contents.skills;
     } else if (type === "projects") {
       projectsContainer.classList.add("visible");
       await fetchRepos();

@@ -22,7 +22,7 @@ body {
 .grid-layout {
   display: grid;
   grid-template-columns: auto auto;
-  align-items: start;
+  align-items: start; 
   justify-content: center;
   gap: 6rem;
   margin-top: 20px; 
@@ -44,13 +44,23 @@ body {
   font-family: 'Quicksand', Arial, sans-serif;
 }
 
+.title-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .title-header h1 {
   font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .title-header p {
   font-size: 1.2rem;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 /* Høyre side */
@@ -58,7 +68,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative; /* Viktig: popup blir absolutt relativt til denne */
+  justify-content: center; 
+  position: relative; 
 }
 
 /* Knappene */
@@ -98,14 +109,14 @@ body {
 /* Popup */
 .popup {
   position: absolute;
-  top: 60px; /* under knappene */
+  top: 60px;
   left: 0;
   background: #434f74;
   border: 2px solid #434f74;
   border-radius: 16px;
   padding: 1.5rem;
-  max-width: 400px;
-  width: 100%;
+  width: calc(100% + 3rem);
+  max-width: 600px;
   min-height: 220px;      
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   visibility: visible;
@@ -123,7 +134,7 @@ body {
 /* Innhold i popup */
 .popup-content {
   display: none;
-  text-align: left;
+  text-align: left; 
   color: #c0c0d4;
 }
 
@@ -173,30 +184,29 @@ body {
 /* Piltaster container */
 .arrows {
   display: flex;
-  justify-content: space-between; /* Venstre til venstre, høyre til høyre */
+  justify-content: space-between;
   margin-top: 1rem;
   width: 100%;
 }
 
 /* Piltaster */
 .arrow {
-  background: none;      /* Fjern boksen */
+  background: none;      
   border: none;
-  padding: 0;            /* Ingen ekstra padding */
-  color: #c0c0d4;        /* Pilfarge */
+  padding: 0;            
+  color: #c0c0d4;        
   cursor: pointer;
   transition: transform 0.2s, color 0.3s;
 }
 
 .arrow:hover {
-  color: #ffffff;         /* Lysere farge ved hover */
+  color: #ffffff;         
   transform: scale(1.2);
 }
 
 .arrow svg {
   display: block;
 }
-
 
 /* Lenker */
 .popup a {
@@ -236,7 +246,6 @@ footer .footer-gif {
   margin-right: 0.5rem;
 }
 
-
 /* Responsivt design */
 @media (max-width: 768px) {
   .grid-layout {
@@ -263,5 +272,6 @@ footer .footer-gif {
   .popup {
     width: 90%;
     top: 70px;
+    max-width: none;
   }
 }

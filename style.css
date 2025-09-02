@@ -173,11 +173,12 @@ body {
 .close-btn {
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 14px;
   background: none;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  color: #c0c0d4;    
 }
 
 /* Piltaster container */

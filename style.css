@@ -1,9 +1,10 @@
+/* Fargevariabler */
 :root {
-  --primary-color: #434f74;   /* brukt til knapper, popup, footer */
-  --secondary-color: #69728e; /* brukt til hover på knappene */
-  --accent-color: #c0c0d4;    /* brukt til tekst/ikoner i popup, footer */
-  --background-color: #ada6c9;/* body bakgrunn */
-  --text-color: #2e3a5e;      /* generell tekst */
+  --primary-color: #434f74;   /* mørk bakgrunn: brukt på knapper, popup, footer */
+  --secondary-color: #69728e; /* hover-effekt på knappene */
+  --accent-color: #c0c0d4;    /* lys tekst/ikon: brukt i popup og footer*/
+  --background-color: #ada6c9; /* body bakgrunn */
+  --text-color: #2e3a5e;   /* generell tekst */
 }
 
 /* Reset */ 
@@ -16,8 +17,8 @@
 /* Body */
 body {
   font-family: 'Quicksand', sans-serif;
-  background: var(--background-color); /* tidligere #ada6c9 */
-  color: var(--text-color);            /* tidligere #2e3a5e */
+  background: var(--background-color, #ada6c9);
+  color: var(--text-color, #2e3a5e);
   display: flex;
   flex-direction: column; 
   align-items: center;
@@ -90,8 +91,8 @@ body {
 
 .nav-wrapper button {
   font-family: 'Quicksand', Arial, sans-serif;
-  background: var(--primary-color); /* tidligere #434f74 */
-  color: var(--accent-color);       /* tidligere #c0c0d4 */
+  background: var(--primary-color, #434f74);
+  color: var(--accent-color, #c0c0d4);
   border: none;
   padding: 0.8rem 1.2rem;
   border-radius: 12px;
@@ -102,7 +103,7 @@ body {
 }
 
 .nav-wrapper button:hover {
-  background: var(--secondary-color); /* tidligere #69728e */
+  background: var(--secondary-color, #69728e);
 }
 
 /* Gengar gif */
@@ -120,10 +121,10 @@ body {
   position: absolute;
   top: 60px;
   left: 0;
-  background: var(--primary-color); /* tidligere #434f74 */
+  background: var(--primary-color, #434f74); /* fallback */
   border-radius: 16px;
   padding: 1.5rem;
-  width: calc(100% + 3rem);
+  width: calc(100% + 0.2rem);
   max-width: 600px;
   min-height: 220px;      
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -131,6 +132,7 @@ body {
   opacity: 1;
   transition: opacity 0.3s ease;
   z-index: 10;
+  overflow-x: hidden; /* hindrer "spretting" på mobil */
 }
 
 /* Skjul popup når hidden */
@@ -143,7 +145,7 @@ body {
 .popup-content {
   display: none;
   text-align: left; 
-  color: var(--accent-color); /* tidligere #c0c0d4 */
+  color: var(--accent-color, #c0c0d4);
 }
 
 .popup-content.visible {
@@ -173,7 +175,7 @@ body {
 .popup ul li i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
-  color: var(--accent-color); /* tidligere #c0c0d4 */
+  color: var(--accent-color, #c0c0d4);
   width: 20px;
   text-align: center;
 }
@@ -187,7 +189,7 @@ body {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: var(--accent-color); /* tidligere #c0c0d4 */    
+  color: var(--accent-color, #c0c0d4);    
 }
 
 /* Piltaster container */
@@ -203,13 +205,13 @@ body {
   background: none;      
   border: none;
   padding: 0;            
-  color: var(--accent-color); /* tidligere #c0c0d4 */        
+  color: var(--accent-color, #c0c0d4);        
   cursor: pointer;
   transition: transform 0.2s, color 0.3s;
 }
 
 .arrow:hover {
-  color: var(--accent-color); /* tidligere #c0c0d4 */         
+  color: var(--accent-color, #c0c0d4);         
   transform: scale(1.2);
 }
 
@@ -219,7 +221,7 @@ body {
 
 /* Lenker */
 .popup a {
-  color: var(--accent-color); /* tidligere #c0c0d4 */
+  color: var(--accent-color, #c0c0d4);
   text-decoration: none;
 }
 
@@ -240,8 +242,8 @@ footer {
   width: 100%;
   text-align: center;
   padding: 1rem 0;
-  background: var(--primary-color); /* tidligere #434f74 */
-  color: var(--accent-color);       /* tidligere #c0c0d4 */
+  background: var(--primary-color, #434f74);
+  color: var(--accent-color, #c0c0d4);
   font-size: 0.9rem;
   position: absolute;
   bottom: 0;
@@ -281,6 +283,8 @@ footer .footer-gif {
   .popup {
     width: 90%;
     top: 70px;
+    left: 50%;
+    transform: translateX(-50%); /* sentrer popup på mobil */
     max-width: none;
   }
 }

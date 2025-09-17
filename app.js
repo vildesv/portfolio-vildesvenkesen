@@ -13,7 +13,7 @@ const closeBtn = document.getElementById("close-popup");
 const contents = {
   about: `
     <h2>About me</h2>
-    <p>Hey there! My name is Vilde Ingelin Svenkesen. 
+    <p>Hey there! My name is Vilde Svenkesen. 
     <br>I’m a course participant at "Kodehode", aspiring fullstack developer and esports coach. 
     <br>
     <br>I have a strong interest in tech, programming, gaming and art. As you may have noticed, I'm a bit of a Pokémon enthusiast and I'm actively engaged in a Pokémon GO-community where I live. 

@@ -1,7 +1,13 @@
 # Portfolio – Vilde Svenkesen
 
 Welcome to my personal portfolio! 🎨  
-This is a simple, responsive website created to showcase my skills and projects as a developer. The portfolio is built with a lightweight and clean design, just how I like it. I have also added small details throughout the page that reflect my interests in Pokémon.  
+This is a simple, responsive website created to showcase my skills and projects as a developer. The portfolio is built with a lightweight and clean design, just how I like it.  
+
+I have added **interactive elements and subtle Pokémon-inspired details** throughout the page, including:
+
+- **Pokédex-style Projects** – Each GitHub project is displayed like a Pokédex entry, showing its name, type (mapped from the tech used), and year (Generation).  
+- **Skills Type Mapping** – My skills are associated with Pokémon types, providing a fun and intuitive way to understand my tech stack.  
+- **Gengar Animation** – The Gengar character moves dynamically between navigation buttons, adding personality while keeping the design clean.
 
 [🔗 View live demo here](https://portfolio-vildesvenkesen.vercel.app)
 
@@ -15,11 +21,24 @@ This is a simple, responsive website created to showcase my skills and projects 
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Interactive UI](https://img.shields.io/badge/Interactive-UI-F9A825?style=for-the-badge)
 
+**Tech ↔ Pokémon Type mapping in Skills:**
+
+- C#, .NET → 🧠 Psychic  
+- JavaScript, React, Vite, Node.js → ⚡ Electric  
+- HTML → 🪨 Rock  
+- CSS → ✨ Fairy  
+- SQL → 📊 Steel  
+- Git, GitHub → 🗡️ Fighting  
+- Azure → ☁️ Flying  
+- Figma → 🎨 Normal
+
 ---
 
 ## 🚀 Features
 
-- **Responsive Design** – Adapts to all screen sizes
-- **Interactive Elements** – Hover effects and dynamic content
-- **Minimalist and Modern Layout** – Focus on content and readability
-- **Portfolio Showcase** – Highlights projects and skills
+- **Responsive Design** – Adapts to all screen sizes  
+- **Interactive Elements** – Hover effects, dynamic content, and popups  
+- **Minimalist and Modern Layout** – Focus on content and readability  
+- **Pokédex-Style Project Showcase** – Projects presented as Pokémon entries with type and year  
+- **Skills Type Mapping** – Skills linked to Pokémon types for an intuitive tech overview  
+- **Animated Gengar** – Moves dynamically across navigation for personality and fun

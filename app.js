@@ -122,17 +122,22 @@ function displayProject(index) {
 
   popupText.innerHTML = `
     <h2>#${entryNumber} — ${repo.name}</h2>
-    <p style="opacity: 0.8; font-size: 0.9rem;">Type: <strong>${type}</strong> • Generation: <strong>${year}</strong></p>
+    <p class="project-meta">
+      Type: <strong class="type-${type.toLowerCase()}">${type}</strong> • 
+      Generation: <strong>${year}</strong>
+    </p>
 
     <img src="${imagePath}" alt="${repo.name}" class="project-img">
 
-    <p><strong>Pokédex Entry:</strong><br>
-    ${repo.description ? repo.description : "No Pokédex data available."}</p>
+    <p class="project-description">
+      <strong>Pokédex Entry:</strong><br>
+      ${repo.description ? repo.description : "No Pokédex data available."}
+    </p>
 
-    <br>
     <p><a href="${repo.html_url}" target="_blank">View Trainer Logs → GitHub</a></p>
   `;
 }
+
 
 buttons.forEach((btn, index) => {
   btn.addEventListener("click", async () => {

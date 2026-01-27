@@ -238,6 +238,24 @@ body {
   margin-bottom: 1rem;  
 }
 
+/* Meta info for projects */
+.project-meta {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.4rem;
+}
+
+/* Type colors */
+.type-electric { color: #F7DF1E; } /* JavaScript / Electric – gul */
+.type-fairy { color: #D291FF; }    /* CSS / Fairy*/
+.type-rock { color: #D9C47F; }     /* HTML / Rock*/
+.type-psychic { color: #FF8C94; }  /* C# / Psychic */
+.type-steel { color: #7C8288; }    /* SQL / Steel */
+.type-fighting { color: #a13b3b; } /* Git / Fighting*/
+.type-flying { color: #87CEFA; }   /* Azure / Flying */
+.type-normal { color: #e2e2e2; }   /* Figma / Normal */
+
+
 /* Footer */
 footer {
   width: 100%;

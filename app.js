@@ -57,17 +57,18 @@ function moveGengarToButton(button) {
   gengar.style.top = `${offsetY}px`;
 }
 
-// Hent prosjekter og begrens til nyeste fra inneværende år
+// Hent prosjekter og begrens til nyeste fra inneværende år + i fjor
 async function fetchRepos() {
   try {
     const response = await fetch("https://api.github.com/users/vildesv/repos");
     repos = await response.json();
 
     const currentYear = new Date().getFullYear();
+    const earliestYear = currentYear - 1; // inkluderer i fjor + i år
 
-    // Filtrer prosjekter: kun fra inneværende år, kun JavaScript eller CSS, og ekskluder portefølje-repoet
+    // Filtrer prosjekter: 2025 + 2026 (automatisk), JS/CSS, ekskluder portefølje
     repos = repos.filter(repo =>
-      (new Date(repo.created_at).getFullYear() === currentYear) &&
+      new Date(repo.created_at).getFullYear() >= earliestYear &&
       (repo.language === "JavaScript" || repo.language === "CSS") &&
       repo.name.toLowerCase() !== "portfolio-vildesvenkesen"
     );
@@ -84,7 +85,7 @@ async function fetchRepos() {
       displayProject(currentProject);
       projectsContainer.classList.add("visible");
     } else {
-      popupText.innerHTML = "<p>Ingen prosjekter fra i år.</p>";
+      popupText.innerHTML = "<p>Ingen prosjekter fra i år eller i fjor.</p>";
       projectsContainer.classList.remove("visible");
     }
   } catch (error) {
@@ -120,7 +121,7 @@ buttons.forEach((btn, index) => {
     if (type === "about") {
       aboutContainer.classList.add("visible");
       aboutContainer.innerHTML = contents.about;
-    } else if (type === "skills") { // ✅ lagt til
+    } else if (type === "skills") {
       skillsContainer.classList.add("visible");
       skillsContainer.innerHTML = contents.skills;
     } else if (type === "projects") {

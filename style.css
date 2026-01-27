@@ -242,7 +242,7 @@ body {
 .project-meta {
   font-size: 0.9rem;
   opacity: 0.8;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 /* Type colors */
@@ -255,6 +255,15 @@ body {
 .type-flying { color: #87CEFA; }   /* Azure / Flying */
 .type-normal { color: #e2e2e2; }   /* Figma / Normal */
 
+.project-description {
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.project-description + p a {
+  display: inline-block; 
+  margin-top: 0.5rem; 
+}
 
 /* Footer */
 footer {

@@ -5,7 +5,7 @@ This is a simple, responsive website created to showcase my skills and projects 
 
 I have added **interactive elements and subtle Pokémon-inspired details** throughout the page, including:
 
-- **Pokédex-style Projects** – Each GitHub project is displayed like a Pokédex entry, showing its name, type (mapped from the tech used), and year (Generation).  
+- **Pokédex-inspired Projects** – Each GitHub project is displayed like a Pokédex entry, showing its name, type (mapped from the tech used), and year (Generation).  
 - **Skills Type Mapping** – My skills are associated with Pokémon types, providing a fun and intuitive way to understand my tech stack.  
 - **Gengar Animation** – The Gengar character moves dynamically between navigation buttons, adding personality while keeping the design clean.
 
@@ -36,7 +36,6 @@ I have added **interactive elements and subtle Pokémon-inspired details** throu
 
 ## 🚀 Features
 
-- **Responsive Design** – Adapts to all screen sizes  
 - **Interactive Elements** – Hover effects, dynamic content, and popups  
 - **Minimalist and Modern Layout** – Focus on content and readability  
 - **Pokédex-Style Project Showcase** – Projects presented as Pokémon entries with type and year  

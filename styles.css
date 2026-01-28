@@ -1,13 +1,13 @@
 /* Fargevariabler */
 :root {
-  --primary-color: #434f74;   /* mørk bakgrunn: brukt på knapper, popup, footer */
-  --secondary-color: #69728e; /* hover-effekt på knappene */
-  --accent-color: #c0c0d4;    /* lys tekst/ikon: brukt i popup og footer*/
-  --background-color: #ada6c9; /* body bakgrunn */
-  --text-color: #2e3a5e;   /* generell tekst */
+  --primary-color: #434f74;
+  --secondary-color: #69728e;
+  --accent-color: #c0c0d4;
+  --background-color: #ada6c9;
+  --text-color: #2e3a5e;
 }
 
-/* Reset */ 
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -17,25 +17,24 @@
 /* Body */
 body {
   font-family: 'Quicksand', sans-serif;
-  background: var(--background-color, #ada6c9);
-  color: var(--text-color, #2e3a5e);
+  background: var(--background-color);
+  color: var(--text-color);
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; 
-  min-height: 100vh; 
-  padding: 200px 20px 75px 20px; 
+  min-height: 100vh;
+  padding: 200px 20px 75px 20px;
 }
 
 /* Grid layout */
 .grid-layout {
   display: grid;
   grid-template-columns: auto auto;
-  align-items: start; 
+  align-items: start;
   justify-content: center;
   gap: 6rem;
-  margin-top: 20px; 
-  max-width: 1200px; 
+  margin-top: 20px;
+  max-width: 1200px;
   width: 100%;
 }
 
@@ -77,8 +76,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center; 
-  position: relative; 
+  justify-content: center;
+  position: relative;
 }
 
 /* Knappene */
@@ -91,19 +90,19 @@ body {
 
 .nav-wrapper button {
   font-family: 'Quicksand', Arial, sans-serif;
-  background: var(--primary-color, #434f74);
-  color: var(--accent-color, #c0c0d4);
+  background: var(--primary-color);
+  color: var(--accent-color);
   border: none;
   padding: 0.8rem 1.2rem;
   border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .nav-wrapper button:hover {
-  background: var(--secondary-color, #69728e);
+  background: var(--secondary-color);
 }
 
 /* Gengar gif */
@@ -121,44 +120,65 @@ body {
   position: absolute;
   top: 60px;
   left: 0;
-  background: var(--primary-color, #434f74); /* fallback */
+  background: var(--primary-color);
   border-radius: 16px;
   padding: 1.5rem;
   width: calc(100% + 0.2rem);
   max-width: 600px;
-  min-height: 220px;      
+  min-height: 220px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   visibility: visible;
   opacity: 1;
   transition: opacity 0.3s ease;
   z-index: 10;
-  overflow-x: hidden; /* hindrer "spretting" på mobil */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-/* Skjul popup når hidden */
 .popup.hidden {
   visibility: hidden;
   opacity: 0;
 }
 
-/* Innhold i popup */
+/* Scrollbar */
+.popup::-webkit-scrollbar {
+  width: 5px;
+}
+
+.popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background: rgba(192, 192, 212, 0.28);
+  border-radius: 10px;
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+  background: rgba(192, 192, 212, 0.45);
+}
+
+.popup {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(192, 192, 212, 0.28) transparent;
+}
+
+/* Popup content */
 .popup-content {
   display: none;
-  text-align: left; 
-  color: var(--accent-color, #c0c0d4);
+  text-align: left;
+  color: var(--accent-color);
 }
 
 .popup-content.visible {
   display: block;
 }
 
-/* Mellomrom etter label i Contact */
 .popup-content li strong {
   margin-right: 0.3rem;
   font-weight: bold;
 }
 
-/* Lister i popup (About + Contact) */
 .popup ul {
   list-style: none;
   padding: 0;
@@ -175,7 +195,7 @@ body {
 .popup ul li i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
-  color: var(--accent-color, #c0c0d4);
+  color: var(--accent-color);
   width: 20px;
   text-align: center;
 }
@@ -189,10 +209,10 @@ body {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: var(--accent-color, #c0c0d4);    
+  color: var(--accent-color);
 }
 
-/* Piltaster container */
+/* Piltaster */
 .arrows {
   display: flex;
   justify-content: space-between;
@@ -200,28 +220,22 @@ body {
   width: 100%;
 }
 
-/* Piltaster */
 .arrow {
-  background: none;      
+  background: none;
   border: none;
-  padding: 0;            
-  color: var(--accent-color, #c0c0d4);        
+  padding: 0;
+  color: var(--accent-color);
   cursor: pointer;
   transition: transform 0.2s, color 0.3s;
 }
 
 .arrow:hover {
-  color: var(--accent-color, #c0c0d4);         
   transform: scale(1.2);
-}
-
-.arrow svg {
-  display: block;
 }
 
 /* Lenker */
 .popup a {
-  color: var(--accent-color, #c0c0d4);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -229,40 +243,35 @@ body {
   text-decoration: underline;
 }
 
+/* Project */
 .project-img {
   width: 100%;
-  max-height: 200px;     
-  object-fit: cover;     
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 12px;
-  margin-top: 0.8rem; 
-  margin-bottom: 1rem;  
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Meta info for projects */
 .project-meta {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-/* Type colors */
-.type-electric { color: #F7DF1E; } /* JavaScript / Electric – gul */
-.type-fairy { color: #D291FF; }    /* CSS / Fairy*/
-.type-rock { color: #D9C47F; }     /* HTML / Rock*/
-.type-psychic { color: #FF8C94; }  /* C# / Psychic */
-.type-steel { color: #7C8288; }    /* SQL / Steel */
-.type-fighting { color: #a13b3b; } /* Git / Fighting*/
-.type-flying { color: #87CEFA; }   /* Azure / Flying */
-.type-normal { color: #e2e2e2; }   /* Figma / Normal */
+.type-icon {
+  margin-left: 0.5rem;
+  width: 50px;
+  height: 20px;
+  vertical-align: middle;
+}
 
 .project-description {
   line-height: 1.4;
   margin-bottom: 0.8rem;
-}
-
-.project-description + p a {
-  display: inline-block; 
-  margin-top: 0.5rem; 
 }
 
 /* Footer */
@@ -270,8 +279,8 @@ footer {
   width: 100%;
   text-align: center;
   padding: 1rem 0;
-  background: var(--primary-color, #434f74);
-  color: var(--accent-color, #c0c0d4);
+  background: var(--primary-color);
+  color: var(--accent-color);
   font-size: 0.9rem;
   position: absolute;
   bottom: 0;
@@ -285,11 +294,16 @@ footer .footer-gif {
   margin-right: 0.5rem;
 }
 
-/* Responsivt design */
+/* Mobil */
 @media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+
   .grid-layout {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
     text-align: center;
   }
 
@@ -304,15 +318,42 @@ footer .footer-gif {
   }
 
   .gengar {
-    top: -30px;
     width: 50px;
+    top: 0;
   }
 
   .popup {
     width: 90%;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%); /* sentrer popup på mobil */
     max-width: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: calc(100vh - 120px);
+  }
+}
+
+/* Mellomstore skjermer */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .popup {
+    top: calc(100% + 10px);
+    max-height: calc(100vh - 150px);
+  }
+
+  #projects-container {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+}
+
+/* Store skjermer */
+@media (min-width: 1025px) {
+  .popup {
+    top: calc(100% + 10px);
+    max-height: calc(100vh - 150px);
+  }
+
+  #projects-container {
+    max-height: 40vh;
+    overflow-y: auto;
   }
 }

@@ -1,4 +1,4 @@
-/* Fargevariabler */
+/* Fargevariabler */ 
 :root {
   --primary-color: #434f74;
   --secondary-color: #69728e;
@@ -24,6 +24,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 200px 20px 75px 20px;
+  overflow-x: hidden; 
 }
 
 /* Grid layout */
@@ -123,7 +124,7 @@ body {
   background: var(--primary-color);
   border-radius: 16px;
   padding: 1.5rem;
-  width: calc(100% + 0.2rem);
+  width: 100%; 
   max-width: 600px;
   min-height: 220px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -131,8 +132,13 @@ body {
   opacity: 1;
   transition: opacity 0.3s ease;
   z-index: 10;
-  overflow-x: hidden;
-  overflow-y: auto;
+
+  /* ✅ SCROLL FIX */
+  overflow-x: hidden; 
+  overflow-y: auto;    
+  overscroll-behavior-x: none;
+  word-break: break-word;
+  box-sizing: border-box; 
 }
 
 .popup.hidden {
@@ -274,6 +280,14 @@ body {
   margin-bottom: 0.8rem;
 }
 
+/* Project-popup */
+#projects-container {
+  max-width: 100%;
+  overflow-x: hidden;  
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -342,6 +356,7 @@ footer .footer-gif {
   #projects-container {
     max-height: 40vh;
     overflow-y: auto;
+    overflow-x: hidden; 
   }
 }
 
@@ -355,5 +370,6 @@ footer .footer-gif {
   #projects-container {
     max-height: 40vh;
     overflow-y: auto;
+    overflow-x: hidden; 
   }
 }

@@ -7,7 +7,9 @@ I have added **interactive elements and subtle Pokémon-inspired details** throu
 
 - **Pokédex-inspired Projects** – Each GitHub project is displayed like a Pokédex entry, showing its name, type (mapped from the tech used), and year (Generation).  
 - **Skills Type Mapping** – My skills are associated with Pokémon types, providing a fun and intuitive way to understand my tech stack.  
-- **Gengar Animation** – The Gengar character moves dynamically between navigation buttons, adding personality while keeping the design clean.
+- **Gengar Animation** – The Gengar character moves dynamically between navigation buttons, adding personality while keeping the design clean.  
+- **Dynamic GitHub Project Fetching** – Projects are automatically loaded from GitHub using the GitHub API.  
+- **Responsive Popup Scaling** – Project popups scale smoothly across screen sizes, preventing footer overlap and improving readability.
 
 [🔗 View live demo here](https://portfolio-vildesvenkesen.vercel.app)
 
@@ -40,4 +42,5 @@ I have added **interactive elements and subtle Pokémon-inspired details** throu
 - **Minimalist and Modern Layout** – Focus on content and readability  
 - **Pokédex-Style Project Showcase** – Projects presented as Pokémon entries with type and year  
 - **Skills Type Mapping** – Skills linked to Pokémon types for an intuitive tech overview  
-- **Animated Gengar** – Moves dynamically across navigation for personality and fun
+- **Animated Gengar** – Moves dynamically across navigation for personality and fun  
+- **Responsive Popup Layout** – Ensures popups scale cleanly across devices  

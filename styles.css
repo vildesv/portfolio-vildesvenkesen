@@ -1,4 +1,4 @@
-/* Fargevariabler */ 
+/* Fargevariabler */  
 :root {
   --primary-color: #434f74;
   --secondary-color: #69728e;
@@ -133,7 +133,6 @@ body {
   transition: opacity 0.3s ease;
   z-index: 10;
 
-  /* ✅ SCROLL FIX */
   overflow-x: hidden; 
   overflow-y: auto;    
   overscroll-behavior-x: none;
@@ -284,8 +283,17 @@ body {
 #projects-container {
   max-width: 100%;
   overflow-x: hidden;  
+  overflow-y: auto;      
   box-sizing: border-box;
   word-break: break-word;
+
+  /* ✅ Usynlig scrollbar */
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+#projects-container::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Edge */
 }
 
 /* Footer */
@@ -356,7 +364,7 @@ footer .footer-gif {
   #projects-container {
     max-height: 40vh;
     overflow-y: auto;
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 }
 
@@ -370,6 +378,6 @@ footer .footer-gif {
   #projects-container {
     max-height: 40vh;
     overflow-y: auto;
-    overflow-x: hidden; 
+    overflow-x: hidden;
   }
 }

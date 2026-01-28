@@ -31,7 +31,7 @@ const contents = {
     <p style="margin-top:0.8rem;font-size:0.85rem;opacity:0.65;">Tech is represented as Pokémon Types in Projects.</p>`,
 
   contact: `<h2>Contact</h2>
-    <p>I'm open to opportunities and collaborations.<br>Feel free to reach out!</p>
+    <p>I'm open to opportunities and collaborations.<br>Feel free to reach out!</p><br>
     <ul>
       <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:vilde_svenkesen@hotmail.no">vilde_svenkesen@hotmail.no</a></li>
       <li><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/vildesv" target="_blank">github.com/vildesv</a></li>
